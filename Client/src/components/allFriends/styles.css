@@ -1,0 +1,67 @@
+.AllFriends{
+  flex:3;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.friendsList-a {
+  border-radius: 0.7rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.friends-a {
+  display: flex;
+  /* align-items: center; */
+}
+
+.friends-a>div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.friendImg-a {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 15%;
+  border:4px solid white;
+  object-fit: cover;
+}
+
+.friendImg-a:hover {
+  box-shadow: 0px 0px 10px #b4d3dd;
+}
+
+.rb-imgContainer {
+  position: relative;
+}
+
+.rb-online {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: rgb(83, 215, 83);
+  border: 2px solid white;
+  top: 3px;
+  right: -5px
+}
+
+.namea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.namea>span:nth-of-type(1) {
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 13px;
+  color: rgb(73, 73, 73);
+}

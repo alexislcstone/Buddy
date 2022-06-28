@@ -1,0 +1,67 @@
+.ProfileModal {
+  border-radius: 60px;
+}
+
+.labb>label {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(118, 118, 118);
+  color: rgb(118, 118, 118);
+  padding: 5px 10px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  border-radius: 7px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.labb>label:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.infoInput{
+  border: none;
+  outline: none;
+  background-color: var(--inputColor);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.formInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 2rem; */
+  margin-bottom: 10px;
+}
+.formtitle {
+  font-size: 25px;
+  font-weight: 700;
+  justify-content: center;
+}
+.formInfo>div {
+  display: flex;
+  /* gap: 1rem; */
+  width: 100%;
+}
+
+.formLabel{
+  display:flex;
+  flex-direction: column;
+  height: 3rem;
+  width: 100%;
+  /* padding-top:1.5rem; */
+}
+.formLabel>label{
+  font-size: 13px;
+  padding: 5px;
+  color:grey;
+}
+
+.loginheader{
+  align-self: center;
+}

@@ -1,0 +1,35 @@
+.InfoCard {
+  flex:2.5;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--cardColor);
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+}
+
+.infoHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoHead>div:hover {
+  cursor: pointer;
+}
+.info>span:nth-of-type(1)>b {
+  font-size: 14px;
+  font-weight: 600;
+}
+.info>span:nth-of-type(2){
+  color:grey;
+  font-size: 14px;
+}
+
+.l-button {
+  height: 2rem;
+  width: 7rem;
+  align-self: flex-end;
+}

@@ -1,0 +1,30 @@
+.Home {
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height:calc(100vh-50px);
+}
+
+.home-r{
+  flex :0.25;
+}
+
+.home-l {
+  flex: 0.25;
+}
+
+.home-feed{
+  flex:5;
+  padding-top:2rem;
+}
+
+.home-center{
+  padding-top: 5px;
+  flex: 5;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+}

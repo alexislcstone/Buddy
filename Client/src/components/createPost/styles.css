@@ -1,0 +1,75 @@
+.CreatePost {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--cardColor);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.CreatePost>img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.CreatePost>div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 1rem;
+}
+
+.CreatePost>div>textarea {
+  background-color: rgba(40, 52, 62, 0.016);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  height: 5rem;
+}
+
+.postOptions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.option:hover {
+  cursor: pointer;
+}
+
+.ps-button {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 12px;
+}
+
+.PreviewImg {
+  position: relative;
+}
+
+.PreviewImg>svg {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  cursor: pointer;
+  /* width: 3rem; */
+}
+
+.PreviewImg>img {
+  width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}

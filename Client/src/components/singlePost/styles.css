@@ -1,0 +1,95 @@
+.SinglePost {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 0.5rem;
+  background-color: var(--cardColor);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 97.5%;
+}
+
+.postHeader{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postHeader>div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.feedProfImg{
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.postHeader>div>div>span {
+font-weight: bold;
+}
+
+.postHeader>div>div>small {
+  color:grey;
+}
+
+.SinglePost>img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  gap:0.5rem;
+  padding: 0px 10px;
+}
+
+.detail>span:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.postReactions {
+  display: flex;
+  /* align-items: flex-start; */
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding:0px 10px;
+}
+
+.postReactions>div{
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.hl {
+  border-bottom: 2px solid #e8e7e7d6;
+  width: 100%
+}
+
+.sp-comment{
+  display: flex;
+  align-items:center;
+  gap:1rem;
+  padding: 0px 10px;
+  padding-bottom: 5px;
+}
+
+.sp-comment>img{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.sp-comment>div>input{
+  background-color: transparent;
+    border: none;
+    outline: none;
+}

@@ -1,0 +1,104 @@
+.NavBar {
+  position: fixed;
+  z-index:1;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  top: 0;
+}
+
+.NavBar-left {
+  flex: 3;
+  display:flex;
+  align-items: center;
+  gap:0.5rem;
+}
+.nb-span{
+  flex:4;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  height:100%;
+}
+
+.nb-span:hover{
+ background-color: rgba(252, 245, 240, 0.81);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 40px;
+  background: linear-gradient(98.63deg, #db6c79 0%, #f78a93 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.NavBar-center {
+  flex: 5;
+  display: flex;
+  justify-content: space-around;
+}
+
+.NavBar-right {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:3rem;
+}
+
+.Search {
+  display: flex;
+  background-color: var(--inputColor);
+  border-radius: 3rem;
+  height: 2rem;
+  padding: 0px 10px;
+  padding-top: 5px;
+}
+
+.Search>input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.NavBarImg {
+  width: 2.3rem;
+  height: 2.3rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--profileShadow);
+}
+
+.NavBarIcons {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.NavBarIconItem {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.NavBarIconBadge {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: rgb(211, 164, 159);
+  position: absolute;
+  font-size: 13px;
+  font-weight: bold;
+  top: -5px;
+}
+
+.nb-prof{
+  display:flex;
+  align-items: center;
+  gap:0.5rem
+}

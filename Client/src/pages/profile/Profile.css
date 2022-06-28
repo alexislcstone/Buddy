@@ -1,0 +1,43 @@
+.Profile {
+  padding-top: 2rem;
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow:-moz-hidden-unscrollable;
+}
+
+.prof-r {
+  flex: 0.25;
+}
+
+.prof-l {
+  flex: 0.25;
+}
+
+.profLeft{
+  flex: 2.5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.prof-center {
+  flex:5;
+  gap:1rem;
+  display:flex;
+  flex-direction: column;
+  height:100vh;
+  overflow: auto;
+}
+.profTop{
+  /* height:30%; */
+}
+.profBottom {
+  display:flex;
+}
+
+.profRight{
+  flex:3;
+  height:100vh;
+  overflow: auto;
+}

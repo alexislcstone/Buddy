@@ -1,0 +1,43 @@
+.LeftSide {
+  flex:2.5;
+  display: flex;
+  flex-direction: column;
+  padding-top:20px;
+  gap:1rem;
+}
+
+.navIcons {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.navIcons>img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.t-button {
+  padding-top:1rem;
+  padding-bottom: 1rem;
+  width: 50%;
+  font-size: 16px;
+  align-self: flex-start;
+  border-radius: 3rem;
+}
+
+.ls-span {
+  font-Size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 3rem;
+  width: 80%;
+  cursor: pointer;
+}
+
+.ls-span:hover {
+  background: rgba(117, 117, 117, 0.182);
+
+}
