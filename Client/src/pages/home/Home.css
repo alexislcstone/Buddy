@@ -1,9 +1,9 @@
 .Home {
-  margin-top: 2rem;
   position: relative;
   display: flex;
   width: 100%;
-  height:calc(100vh-50px);
+  height:98vh;
+  padding-top: 2vh;
 }
 
 .home-r{
@@ -19,8 +19,14 @@
   padding-top:2rem;
 }
 
+.home-left{
+  flex:2.5;
+  height: 100vh;
+  overflow: auto;
+  padding-top: 20px;
+}
 .home-center{
-  padding-top: 5px;
+  padding-top: 20px;
   flex: 5;
   gap: 1rem;
   display: flex;

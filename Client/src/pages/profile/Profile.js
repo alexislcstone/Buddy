@@ -1,5 +1,6 @@
-import React, { useState, useRef,useEffect } from 'react';
+import React, { useState, useRef,useEffect,useContext } from 'react';
 import {useParams} from 'react-router'
+import {AuthContext} from '../../context/AuthContext';
 import './Profile.css';
 import NavBar from '../../components/navBar/NavBar.jsx'
 import LeftSide from '../../components/leftSide/LeftSide.jsx'
@@ -12,12 +13,15 @@ import AllFriends from '../../components/allFriends/AllFriends.jsx'
 import axios from 'axios';
 
 export default function Profile() {
+  const {user:currUser} = useContext(AuthContext);
   const [user, setUser] = useState([])
   const username = useParams().username
+  const[followed,setFollowed] = useState(null)
   useEffect(()=>{
     const fetchUsers = async() =>{
       const res = await axios.get( `/user/`,{params:{username:username}});
       setUser(res.data)
+      setFollowed(currUser.following.includes(`${res.data?._id}`))
     }
     fetchUsers()
   },[username])
@@ -37,7 +41,7 @@ export default function Profile() {
         {/* center */}
         <div className='prof-center'>
           <div className='profTop'>
-            <ProfCard user={user}/>
+            <ProfCard user={user} followed={followed} setFollowed={setFollowed}/>
           </div>
           <div className='profBottom'>
             <Feed username={username}/>

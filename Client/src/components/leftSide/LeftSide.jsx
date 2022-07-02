@@ -21,12 +21,12 @@ function LeftSide() {
       <div className="LeftSide-container">
       <>
       <div className='navIcons'>
-          <Link style={{textDecoration: 'none', color:'black'}} to={`/`}>
-        <span className='ls-span'>
+        <Link style={{textDecoration: 'none', color:'black'}} to={`/`}>
+          <span className='ls-span'>
             <RiHomeHeartLine style={{ fontSize: '30px', marginRight: '10px' }} />
-          Home
-        </span>
-          </Link>
+            Home
+          </span>
+        </Link>
         <span className='ls-span'>
           <RiHashtag style={{ fontSize: '30px', marginRight: '10px' }} />
           Explore
@@ -39,10 +39,12 @@ function LeftSide() {
           <RiNotificationLine style={{ fontSize: '30px', marginRight: '10px' }} />
           Notifications
         </span>
-        <span className='ls-span'>
-          <RiMessage2Line style={{ fontSize: '30px', marginRight: '10px' }} />
-          Messages
-        </span>
+        <Link style={{textDecoration: 'none', color:'black'}} to={`/messages`}>
+          <span className='ls-span'>
+            <RiMessage2Line style={{ fontSize: '30px', marginRight: '10px' }} />
+            Messages
+          </span>
+        </Link>
         <span className='ls-span'>
           <RiBookmark3Line style={{ fontSize: '30px', marginRight: '10px' }} />
           Saved

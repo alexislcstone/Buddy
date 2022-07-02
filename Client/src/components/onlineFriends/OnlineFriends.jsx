@@ -10,7 +10,7 @@ export default function OnlineFriends({user}){
   useEffect(()=>{
     const getFriends = async()=>{
       try{
-        const friendList = await axios.get(`/user/friends/${user._id}`)
+        const friendList = await axios.get(`/user/friends/${user?._id}`)
         setFriends(friendList.data);
       }catch(err){
         console.log(err)
@@ -22,7 +22,7 @@ export default function OnlineFriends({user}){
     <div className='onlinefriends'>
       <h4>Online Friends</h4>
         <div className='friendsList'>
-        {friends.map((friend, id) => {
+        {friends?.map((friend, id) => {
         return (
           <Link to={`/profile/${friend.username}`} style={{textDecoration: 'none', color:'black'}}>
             <div className='friends'>
@@ -32,7 +32,7 @@ export default function OnlineFriends({user}){
                   <span className="rb-online"></span>
                 </div>
                 <div className='name'>
-                  <span>{friend.firstname} {friend.lastname[0]}</span>
+                  <span>{friend.firstname} {friend.lastname}</span>
                   <span>@{friend.username}</span>
                 </div>
               </div>

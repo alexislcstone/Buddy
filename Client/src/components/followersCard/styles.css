@@ -8,19 +8,19 @@
   font-size: 13px;
 }
 
-.follower {
+.recFollower {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.follower>div {
+.recFollower>div {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.followerImg {
+.recFollowerImg {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;

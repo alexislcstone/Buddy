@@ -14,7 +14,7 @@ function Auth() {
   const confirmPassword = useRef()
   const {user,isFetching, error, dispatch} = useContext(AuthContext);
 
-  const [isSignUp, setIsSignUp] = useState(true);
+  const [isSignUp, setIsSignUp] = useState(false);
   const [confirmPass, setConfirmPass] = useState(true)
 
   const handleSubmit = async(e) => {
@@ -68,8 +68,8 @@ function Auth() {
         <div className='auth-left'>
           {/* <img src={Logo} alt='' /> */}
           <div className='webName'>
-            <span>PawChat</span>
-            <div>Meet and hang out with furry friends around you!</div>
+            <span>🐾 Buddy</span>
+            <div>Meet and plan events with furry friends!</div>
           </div>
         </div>
         <div className='auth-right'>
@@ -97,27 +97,32 @@ function Auth() {
                 />
               </div>)}
               <div>
-                <input
-                  type='text'
-                  placeholder='Username'
-                  className='infoInput'
-                  name='username'
-                  // onChange={handleChange}
-                  // defaultValue={data.username}
-                  ref={username}
-                />
-              </div>
-              <div>
-                <input
-                  type='email'
-                  placeholder='Email'
-                  className='infoInput'
-                  name='email'
-                  // onChange={handleChange}
-                  // defaultValue={data.username}
-                  ref={email}
-                />
-              </div>
+                  <input
+                    type='text'
+                    placeholder='Username'
+                    className='infoInput'
+                    name='username'
+                    // onChange={handleChange}
+                    // defaultValue={data.username}
+                    ref={username}
+                  />
+                </div>
+                {
+                isSignUp &&
+                (
+                <div>
+                  <input
+                    type='email'
+                    placeholder='Email'
+                    className='infoInput'
+                    name='email'
+                    // onChange={handleChange}
+                    // defaultValue={data.username}
+                    ref={email}
+                  />
+                </div>
+              )
+              }
               <div>
                 <input
                   type='password'

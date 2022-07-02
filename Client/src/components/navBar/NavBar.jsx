@@ -18,11 +18,10 @@ import {
 
 function NavBar() {
   const {user} = useContext(AuthContext)
-  console.log(user)
   return (
     <div className="NavBar">
       <div className="NavBar-left">
-        <span className="logo">🐾 PupBook</span>
+        <span className="logo">🐾 Buddy</span>
         <div className="Search">
           <div className='s-icon'>
             <UilSearch />
@@ -59,7 +58,9 @@ function NavBar() {
             <span className="NavBarIconBadge">1</span>
           </div>
           <div className="NavBarIconItem">
-            <RiMessage2Line style={{ fontSize: '25px' }} />
+            <Link style={{textDecoration: 'none', color:'black'}} to={`/messages`}>
+              <RiMessage2Line style={{ fontSize: '25px' }} />
+            </Link>
             <span className="NavBarIconBadge">2</span>
           </div>
           <div className="NavBarIconItem">

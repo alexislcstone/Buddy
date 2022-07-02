@@ -1,0 +1,98 @@
+.Messages{
+  position: relative;
+  height:100vh;
+  /* padding-top: 9vh; */
+  display: flex;
+}
+
+.chat-l {
+  flex: 0.25;
+}
+
+.chat-r {
+  flex: 0.25;
+}
+
+.chat-feed {
+  flex: 5;
+  padding-top: 2rem;
+}
+
+.chat-left {
+  flex: 3.5;
+  background-color: rgba(255, 255, 255, 0.829);
+  overflow: auto;
+}
+
+.chat-center {
+  flex: 5.5;
+}
+
+.chat-right {
+  position: relative;
+  flex: 3.5;
+  height: 100vh;
+  overflow: auto;
+}
+
+.lc-wrapper,.cc-wrapper,.rc-wrapper{
+  padding:30px 30px 20px 30px;
+}
+.lc-wrapper{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 9vh;
+}
+.rc-wrapper{
+  padding-top: 10vh;
+  padding-right:5rem;
+}
+
+.cc-wrapper{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 4vh;
+}
+
+.lc-input{
+  width:90%;
+  padding:15px 20px;
+  border:none;
+  font-size: 16px;
+  border-bottom: 2px solid rgb(224, 224, 224);
+  background-color: rgba(255, 255, 255, 0.802);
+}
+
+.cc-top{
+  height: 81vh;
+  overflow: auto;
+}
+
+.cc-bottom>form{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cc-bottom>form>textarea{
+  width:80%;
+  padding:10px;
+  height:90px;
+  border:none;
+  border-radius: 1rem;
+}
+
+.cc-submitBtn{
+  width:70px;
+  height:40px
+}
+
+.noConvo{
+  position: absolute;
+  top:80px;
+  font-size: 40px;
+  color:rgba(128, 128, 128, 0.248);
+  /* text-align: center; */
+  cursor:default;
+}

@@ -8,7 +8,7 @@ router.post("/", async (req, res) => {
     await newPost.save()
     res.status(200).json(newPost)
   } catch (err) {
-    re.status(500).json(err)
+    res.status(500).json(err)
   }
 })
 

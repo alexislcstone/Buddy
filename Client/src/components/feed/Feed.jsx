@@ -23,8 +23,9 @@ function Feed({username}) {
   },[username,user._id])
   return (
     <div className="Feed">
-      {username===user.username?<CreatePost />:null}
+      {username===user.username || !username?<CreatePost />:null}
       <PostFeed posts={posts}/>
+      <br/>
     </div>
   );
 }

@@ -35,17 +35,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* gap: 2rem; */
   margin-bottom: 10px;
 }
 .formtitle {
   font-size: 25px;
   font-weight: 700;
   justify-content: center;
+  margin-bottom: -40px;
+  margin-top: -10px;
 }
 .formInfo>div {
   display: flex;
-  /* gap: 1rem; */
   width: 100%;
 }
 
@@ -56,6 +56,7 @@
   width: 100%;
   /* padding-top:1.5rem; */
 }
+
 .formLabel>label{
   font-size: 13px;
   padding: 5px;
@@ -64,4 +65,8 @@
 
 .loginheader{
   align-self: center;
+}
+
+.formCont{
+  padding:15px
 }

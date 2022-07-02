@@ -4,7 +4,8 @@ const bcrypt = require('bcrypt')
 
 //updating user information
 router.put("/:id", async (req, res) => {
-  if (req.body.userId === req.params.id || req.body.isAdmin) {
+  console.log(req.body,req.params.id)
+  if (req.body._id === req.params.id || req.body.isAdmin) {
     if (req.body.password) {
       try {
         const salt = await bcrypt.genSalt(10)
@@ -58,13 +59,15 @@ router.get("/", async (req, res) => {
 router.put("/:id/follow", async (req, res) => {
   const id = req.params.id
   const userId = req.body.userId
+  console.log(id,userId)
   if (userId === id) {
     res.status(403).json("You cannot follow yourself")
   } else {
     try {
       const followThem = await User.findById(id)
       const meUser = await User.findById(userId)
-      if (!followThem.followers.includes(userId)) {
+
+      if (!meUser.following.includes(id)) {
         await followThem.updateOne({ $push: { followers: userId } })
         await meUser.updateOne({ $push: { following: id } })
         res.status(200).json("Followed!")
@@ -118,6 +121,33 @@ router.get('/friends/:userId',async(req,res)=>{
     res.status(200).json(friendList)
   }catch(err){
     res.status(500).json(err)
+  }
+})
+
+router.get('/nonfriend/:userId', async(req,res)=>{
+  try{
+    const user = await User.findById(req.params.userId)
+    const users = await User.find({})
+    const nonfriend = [];
+    let lim=0;
+    if(users.length>20){
+      lim += 20;
+    }else{
+      lim +=users.length
+    }
+    console.log(lim)
+    for(let i = 0; i < lim; i++){
+      console.log(JSON.stringify(users[i]._id) === JSON.stringify(user._id))
+      if(user.following.includes(users[i]._id) || JSON.stringify(users[i]._id) === JSON.stringify(user._id)){
+        continue;
+      }else{
+        const {_id,username,profilePicture,firstname,lastname}=users[i]
+        nonfriend.push({_id,username,profilePicture,firstname,lastname})
+      }
+    }
+   res.status(200).json(nonfriend)
+  }catch(err){
+    console.log(err)
   }
 })
 

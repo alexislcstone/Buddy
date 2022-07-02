@@ -14,7 +14,11 @@ function Home() {
       <NavBar />
       <div className="Home">
         <div className='home-r'/>
-        <LeftSide />
+        <div className='home-left'>
+          <LeftSide />
+          <FollowersCard currUser={user}/>
+          <br/>
+        </div>
         <div className='home-r'/>
         <div className="home-feed">
           <div className="home-center">

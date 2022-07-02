@@ -1,0 +1,29 @@
+.Convo-Parent{
+  display: flex;
+  flex-direction: column;
+}
+
+.Convo{
+  position:relative;
+  display:flex;
+  align-items: center;
+  gap:1rem;
+  padding:10px;
+  cursor:pointer;
+  margin-top: 10px
+}
+
+.Convo:hover{
+  background-color: rgb(235, 235, 235);
+}
+
+.convo-img{
+  width:3rem;
+  height: 3rem;
+  border-radius:50%;
+  object-fit: cover;
+}
+
+.convo-name{
+  font-weight: 600;
+}

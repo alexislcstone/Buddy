@@ -8,6 +8,11 @@ import {AuthContext} from '../../context/AuthContext';
 function InfoCard({user}) {
   const [modalOpen, setModalOpen] = useState(false)
   const {user:currUser} = useContext(AuthContext);
+
+  const handleClick = ()=>{
+    window.localStorage.clear()
+    window.location.reload()
+  }
   return (
     <div className="InfoCard">
       <div className='infoHead'>
@@ -51,7 +56,7 @@ function InfoCard({user}) {
         <span>{user.worksAt}</span>
       </div>
         <ProfileModal modalOpen={modalOpen} setModalOpen={setModalOpen} user={user}/>
-      <button className='button l-button'>Logout</button>
+      <button className='button l-button' onClick={handleClick}>Logout</button>
     </div>
   );
 }
